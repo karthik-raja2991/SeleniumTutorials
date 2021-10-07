@@ -46,5 +46,21 @@ namespace SeleniumProject
             driver.Manage().Window.Maximize();
             driver.Quit();
         }
+
+        [TestMethod]
+        public void NavigateBrowsers()
+        {
+            // navigate is method in Iwebdriver interface
+            // it returns Inavigation type
+            // gotourl is method in inavigation interface
+
+            // driver.navigate() return instance of INavigation
+            // I navigation has method gotourl
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = "http://ankpro.com";
+            
+            driver.Navigate().GoToUrl("http://ankpro.com");
+
+        }
     }
 }
